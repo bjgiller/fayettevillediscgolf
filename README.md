@@ -35,12 +35,13 @@ visitor ──► Cloudflare (DNS + proxy, SSL Full, Always Use HTTPS)
 
 | Path | What |
 |---|---|
-| `index.html` | Home: hero, "Next up" strip, Weekly Rounds, Tags, Signature Events, Sponsors summary, About, Join |
+| `index.html` | Home: hero, "Next up" strip, Weekly Rounds, Tags, Signature Events, Sponsors summary, About, Meet Your EC, Join |
 | `sponsors.html` | 2027 sponsor packet at `/sponsors`, the link Brady sends to prospective sponsors; ends with the contact form |
 | `css/style.css` | All styles. Dark theme in FDGA teal `#1f7f84`/`#2bb3b9` and gold `#f0c814` (same palette as the City proposal) |
 | `js/main.js` | Mobile nav toggle + sponsor form submit |
 | `images/fdga-logo.png` | FDGA logo, 800px, transparent (original 1400px is in `hogwildhandiwork/fdga/images/`) |
 | `images/favicon.svg` | Teal circle with a gold disc |
+| `images/ec/` | EC portraits, cropped to 640x800 JPEG (originals were in Brady's Downloads) |
 | `images/sponsors/` | Sponsor logos, resized to 800px wide (shown on a white card) |
 | `CNAME`, `.nojekyll`, `.gitattributes` | Pages domain, serve every file, line endings |
 
@@ -60,6 +61,8 @@ that can't be traced to one of those or to Brady.
 | Monday Flip Doubles | Monday evenings ~5:30 PM, mainly Northshore at Lake Fayetteville | March – October | Andrew McDonagh (facebook.com/andrew.mcdonagh.142) |
 | Wacky Wednesday | Wednesday mornings ~10 AM, course rotates | Year-round | Mitchell Twombley (facebook.com/mitchell.twombley) |
 | FDGA Tag Match | Saturdays or Sundays | Year-round | Paul Pequette (facebook.com/paul.pequette) |
+
+**Meet Your EC** (Executive Council): Andrew McDonagh, President (photo with his son at Northshore, OK to show); Brady Gilleran, Vice President (facebook.com/brady.gilleran). Bios only use facts from the group/DGS.
 
 **Tags:** $10/year numbered bag tag = club membership; needed for tag-match cash games.
 
@@ -102,6 +105,6 @@ that can't be traced to one of those or to Brady.
   "Current Sponsors" in `sponsors.html` and the sponsors section of `index.html`.
 - **Packet year:** the packet says 2027; roll it forward each fall.
 - When changing CSS or JS, bump `?v=N` on its tag in **both** HTML files (currently
-  `style.css?v=6`, `main.js?v=2`).
+  `style.css?v=7`, `main.js?v=2`).
 - Workflow: edit, commit, push to `main`; live in about a minute. Verify with
   `curl -s https://www.fayettevillediscgolf.com/ | grep ...`.
