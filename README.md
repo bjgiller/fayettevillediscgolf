@@ -8,7 +8,7 @@ domain on Cloudflare, same setup as `hogwildhandiwork/`.
 | `index.html` | The whole site: weekly rounds, signature events, about, join |
 | `css/style.css` | Styles (FDGA teal/gold, same palette as the FDGA proposal) |
 | `js/main.js` | Mobile nav toggle |
-| `images/` | `fdga-logo.png` (800px), `favicon.svg` |
+| `images/` | `fdga-logo.png` (800px), `favicon.svg`, `sponsors/` (sponsor logos, 800px) |
 | `CNAME` | `www.fayettevillediscgolf.com` |
 
 ## Updating
