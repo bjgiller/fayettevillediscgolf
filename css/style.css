@@ -179,34 +179,50 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: normal; line-height
 .lead { font-size: 18px; color: var(--muted); }
 
 /* Weekly rounds */
-.weekly-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.weekly-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .weekly-card {
   display: flex;
-  gap: 22px;
-  align-items: flex-start;
+  flex-direction: column;
   border: 1px solid var(--border);
   border-top: 3px solid var(--teal);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 26px;
   background: var(--card);
 }
+.weekly-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
 .weekly-day {
   flex-shrink: 0;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: var(--teal-dark);
   border: 2px solid var(--teal);
   color: var(--gold);
   font-family: var(--font-head);
-  font-size: 24px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
+.weekly-day-sm { font-size: 15px; line-height: 1.05; }
+.season {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.season-limited { color: var(--gold); border-color: var(--gold); }
 .weekly-card h3 { font-size: 24px; margin-bottom: 4px; }
-.weekly-when { font-weight: 600; color: var(--gold); margin-bottom: 10px; }
+.weekly-when { font-weight: 600; color: var(--gold); }
+.weekly-host { font-size: 14.5px; color: var(--muted); margin: 2px 0 12px; }
+.weekly-host a { color: var(--teal); font-weight: 600; }
 .weekly-card p:last-child { color: var(--muted); }
+.tag-match .weekly-host { margin-bottom: 10px; }
 .weekly-note { margin-top: 24px; color: var(--muted); }
 
 /* Tags */
@@ -523,6 +539,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: normal; line-height
 /* Responsive */
 @media (max-width: 900px) {
   .pkg-mini-grid { grid-template-columns: repeat(2, 1fr); }
+  .weekly-grid { grid-template-columns: 1fr; }
   .reach-grid, .timeline { grid-template-columns: repeat(2, 1fr); }
   .event-sponsor-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -544,15 +561,16 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: normal; line-height
   .nav-links.open { display: flex; }
   .nav-links a { padding: 10px 24px; }
   .nav-links .nav-cta { margin-top: 6px; }
-  .weekly-grid, .about-grid, .tags-grid { grid-template-columns: 1fr; }
+  .about-grid, .tags-grid { grid-template-columns: 1fr; }
   .sponsor-feature { flex-direction: column; align-items: flex-start; }
   .section { padding: 60px 0; }
 }
 
 @media (max-width: 560px) {
-  .weekly-card, .event { flex-direction: column; gap: 16px; padding: 22px; }
-  .event-month, .weekly-day { width: 64px; height: 64px; }
-  .event-month span, .weekly-day { font-size: 21px; }
+  .event { flex-direction: column; gap: 16px; padding: 22px; }
+  .weekly-card { padding: 22px; }
+  .event-month { width: 64px; height: 64px; }
+  .event-month span { font-size: 21px; }
   .event-sponsor-grid, .pkg-mini-grid, .reach-grid, .timeline { grid-template-columns: 1fr; }
   .pkg { padding: 24px; }
   .pkg-head { flex-direction: column; gap: 8px; }
