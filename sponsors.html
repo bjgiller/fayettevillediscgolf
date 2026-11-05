@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://www.fayettevillediscgolf.com/images/fdga-logo.png">
 <meta property="og:url" content="https://www.fayettevillediscgolf.com/sponsors">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/css/style.css?v=6">
 </head>
 <body>
 
@@ -213,12 +213,32 @@
     <div class="wrap">
       <h2>Let's find your spot</h2>
       <p>
-        Reach out to Brady Gilleran, FDGA Vice President, to claim a package or ask questions.
+        Send a note to Brady Gilleran, FDGA Vice President, to claim a package or ask questions.
       </p>
-      <div class="hero-actions">
-        <a href="mailto:bjgiller@gmail.com?subject=FDGA%202027%20Sponsorship" class="btn btn-gold">Email Brady</a>
-        <a href="tel:+15015802270" class="btn btn-outline">501-580-2270</a>
-      </div>
+      <form id="sponsor-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        </div>
+        <div class="form-row">
+          <label>Business<input type="text" name="business" autocomplete="organization"></label>
+          <label>Package
+            <select name="pkg">
+              <option value="unsure">Not sure yet</option>
+              <option value="presenting">Season Presenting Partner ($2,500)</option>
+              <option value="weekly">Weekly Series Partner ($750)</option>
+              <option value="title">Event Title Sponsor ($500 / $1,000)</option>
+              <option value="hole">Hole Sponsor ($200)</option>
+              <option value="friend">Friend of FDGA ($100 or in-kind)</option>
+            </select>
+          </label>
+        </div>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <!-- Honeypot: hidden from people, bots fill it in -->
+        <label class="hp" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <button type="submit" class="btn btn-gold">Send message</button>
+        <p class="form-status" role="status"></p>
+      </form>
     </div>
   </section>
 
@@ -228,6 +248,6 @@
   <p>Fayetteville Disc Golf Association · 501(c)(3) nonprofit · Fayetteville, Arkansas · <a href="/">fayettevillediscgolf.com</a></p>
 </footer>
 
-<script src="/js/main.js?v=1"></script>
+<script src="/js/main.js?v=2"></script>
 </body>
 </html>
