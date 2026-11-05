@@ -209,6 +209,65 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: normal; line-height
 .weekly-card p:last-child { color: var(--muted); }
 .weekly-note { margin-top: 24px; color: var(--muted); }
 
+/* Tags */
+.tags-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: center; }
+.tags-grid .lead { margin-bottom: 28px; }
+.tag-match {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+.tag-match h3 { font-size: 24px; margin-bottom: 4px; }
+.tag-match p:last-child { color: var(--muted); }
+.tag-card {
+  position: relative;
+  max-width: 320px;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(160deg, #1d3a3d, var(--card) 60%);
+  border: 2px solid var(--gold);
+  border-radius: 22px;
+  padding: 44px 30px 32px;
+  box-shadow: 0 0 40px rgba(240, 200, 20, 0.1);
+}
+/* Punched hole, like a real bag tag */
+.tag-card::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  border: 2px solid var(--gold);
+}
+.tag-card-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.tag-card-price { font-family: var(--font-head); font-size: 64px; color: var(--gold); line-height: 1.1; margin-top: 8px; }
+.tag-card-sub { color: var(--muted); margin-bottom: 20px; }
+.tag-card ul { list-style: none; display: grid; gap: 8px; text-align: left; }
+.tag-card li { position: relative; padding-left: 22px; color: var(--muted); font-size: 15px; }
+.tag-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
 /* Events */
 .event-list { display: grid; gap: 20px; }
 .event {
@@ -426,7 +485,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: normal; line-height
   .nav-links.open { display: flex; }
   .nav-links a { padding: 10px 24px; }
   .nav-links .nav-cta { margin-top: 6px; }
-  .weekly-grid, .about-grid { grid-template-columns: 1fr; }
+  .weekly-grid, .about-grid, .tags-grid { grid-template-columns: 1fr; }
   .sponsor-feature { flex-direction: column; align-items: flex-start; }
   .section { padding: 60px 0; }
 }
